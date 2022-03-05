@@ -19,6 +19,8 @@
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
+	// Mount the user's .ssh directory into container to allow for git ssh operations
+	"mounts": ["source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/ros/.ssh,type=bind,consistency=cached"],
 	"extensions": [
 		"dotjoshjohnson.xml",
 		"zachflower.uncrustify",
@@ -30,6 +32,16 @@
 		"smilerobotics.urdf",
 		"streetsidesoftware.code-spell-checker",
 		"twxs.cmake",
-		"yzhang.markdown-all-in-one"
+		"yzhang.markdown-all-in-one",
+        "2gua.rainbow-brackets",
+        "betwo.b2-catkin-tools",
+        "Compulim.compulim-vscode-closetag",
+        "Gruntfuggly.todo-tree",
+        "hbenl.vscode-test-explorer",
+        "ms-python.vscode-pylance",
+        "ms-vscode.test-adapter-converter",
+        "njpwerner.autodocstring",
+        "oderwat.indent-rainbow",
+        "shardulm94.trailing-spaces"
 	]
 }
